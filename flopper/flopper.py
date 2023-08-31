@@ -3,7 +3,7 @@ from functools import partial
 import torch.nn as nn
 from fvcore.nn import FlopCountAnalysis, flop_count_table
 
-from .custom_ops import FLOPPER_OPS
+from .operations import FLOPPER_OPS
 
 
 def count_flops(model: nn.Module, *args, silent: bool = False, **kwargs) -> int:
