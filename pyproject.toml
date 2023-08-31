@@ -11,11 +11,11 @@ authors = [
 ]
 dependencies = ["fvcore>=0.1.5", "torch>=1.8"]
 requires-python = ">=3.8"
-version = "0.1.0"
+version = "0.1.1"
 
 [project.urls]
-Homepage = "https://github.com/abcamiletto/mmit"
-Repository = "https://github.com/abcamiletto/mmit"
+Homepage = "https://github.com/abcamiletto/flopper"
+Repository = "https://github.com/abcamiletto/flopper"
 
 [project.optional-dependencies]
 dev = ["black", "pre-commit"]
