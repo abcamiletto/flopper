@@ -1,7 +1,7 @@
 # Flopper - A FLOP counter for PyTorch
 
 An enhanced FLOP counter based on fvcore with additional support to custom modules and simplified API
-This tool is a lightweight wrapper around [fvcore](https://github.com/facebookresearch/fvcore) flop counter, which is a PyTorch based FLOP counter. It supports counting FLOPs for custom modules and provides a simplified API.
+This tool is a lightweight wrapper around [fvcore](https://github.com/facebookresearch/fvcore) flop counter, which is a PyTorch based FLOP counter. It supports counting FLOPs for additional modules and provides a simplified API, which makes it easier to use.
 
 ## Installation
 
