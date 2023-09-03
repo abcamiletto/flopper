@@ -45,4 +45,4 @@ jobs:
 
       - name: Run tests with pytest
         run: |
-          pytest -v --cov-report xml --durations=0 --color=yes
+          pytest -v --durations=0 --color=yes
