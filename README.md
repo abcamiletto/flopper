@@ -21,7 +21,9 @@ from flopper import count_flops
 model = YourRandomModel()
 batch = torch.randn(1, 3, 224, 224)
 
-flops = count_flops(model, batch)
+flops = count_flops(model, batch) # This will print the total number of FLOPs
+
+n_flops = flops.total()
 ```
 
 To get more detailed information, you can do the following:
