@@ -1,5 +1,3 @@
-from typing import Any, List
-
 import numpy as np
 from fvcore.nn.jit_handles import get_shape
 

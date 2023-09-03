@@ -1,4 +1,6 @@
-zero_fn = lambda inputs, outputs: 0
+def zero_fn(inputs, outputs):
+    return 0
+
 
 ZERO_FLOP_OPS = {
     "aten::zeros": zero_fn,
