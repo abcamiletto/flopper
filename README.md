@@ -35,6 +35,15 @@ print(flops.by_module_and_operator())
 print(flops.get_table())
 ```
 
+Out API supports also the usage of keyword arguments in the model's forward function. Let's look at an example:
+
+```python
+input_1, input_2 = ...
+mode = "advanced"
+
+flops = count_flops(model, input_1, input_2, mode=mode)
+```
+
 ## Adding support for custom new modules
 
 Work in progress
