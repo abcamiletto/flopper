@@ -32,13 +32,12 @@ def count_flops(model: nn.Module, *args, silent: bool = False, **kwargs) -> int:
         >>> flops.get_table()
     """
     if kwargs is not None:
-        model.forward = partial(model.forward, **kwargs)  # To be tested
-        raise NotImplementedError("Keyword arguments are not supported yet.")
+        model.forward = partial(model.forward, **kwargs)
 
     flops = FlopCountAnalysis(model, args).set_op_handle(**FLOPPER_OPS)
 
     if not silent:
-        flops_str = smart_format(flops)
+        flops_str = smart_format(flops.total())
         name = model.__class__.__name__
         print(f"FLOPs of the model {name}: {flops_str}FLOPs")
 

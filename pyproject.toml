@@ -11,14 +11,14 @@ authors = [
 ]
 dependencies = ["fvcore>=0.1.5", "torch>=1.8"]
 requires-python = ">=3.8"
-version = "0.1.5"
+version = "0.2.0"
 
 [project.urls]
 Homepage = "https://github.com/abcamiletto/flopper"
 Repository = "https://github.com/abcamiletto/flopper"
 
 [project.optional-dependencies]
-dev = ["black", "pre-commit"]
+dev = ["black", "pre-commit", "pytest"]
 
 [tool.setuptools.packages.find]
 namespaces = false # to disable scanning PEP 420 namespaces (true by default)
