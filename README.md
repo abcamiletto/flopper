@@ -46,4 +46,20 @@ flops = count_flops(model, input_1, input_2, mode=mode)
 
 ## Adding support for custom new modules
 
-Work in progress
+If you want to add support for a new module, you can do so by creating a dictionary with the following structure:
+
+```python
+import numpy as np
+from fvcore.nn.jit_handles import get_shape
+from flopper import count_flops
+
+model = YourRandomModel()
+batch = torch.randn(1, 3, 224, 224)
+
+def mean_flop_jit(inputs, outputs):
+    input_shape = get_shape(inputs[0])
+    return np.prod(input_shape)
+
+custom_ops = {"aten::mean": mean_flop_jit}
+flops = count_flops(model, batch, custom_ops=custom_ops)
+```
