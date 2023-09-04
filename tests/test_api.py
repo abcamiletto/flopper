@@ -11,3 +11,8 @@ def test_table(model, input_batch):
     flops = count_flops(model, input_batch)
     table = flops.get_table()
     assert table is not None
+
+
+def test_custom_ops(model, input_batch):
+    flops = count_flops(model, input_batch, custom_ops={"aten:null": lambda i, o: 0})
+    assert flops is not None
